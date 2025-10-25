@@ -337,10 +337,7 @@ button.btn-danger:hover {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .dashboard-header {
-        /* text-align is already centered from base */
-    }
-
+  
     .dashboard-header h1 {
         font-size: 2rem; /* Larger header for small tablets/landscape phones */
     }

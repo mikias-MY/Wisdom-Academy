@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form) {
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
-
             // Show a pending message
             showMessage('pending', 'Submitting your application...');
 
