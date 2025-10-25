@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Academy</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link class="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js" defer></script>
+    <script src="supabase-init.js" defer></script>
+    <script src="public-stats.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="#home"><img src="assets/wisdom_academy.png" alt="Wisdom Academy"></a></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="applications.html">Applications</a>
+            <a href="contact.html">Contact</a>
+            <a class="login-button" href="login.html">Login</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+    <section id="home">
+        <div class="home">
+        <div class="home-content-text-buttons animate-on-scroll">
+            <h1>Welcome to Wisdom Academy</h1>
+            <p>Your journey to knowledge begins here with Wisdom Academy, your gateway to a brighter future.</p>
+            <div class="home-content-text-buttons-buttons" style="display: flex; gap: 15px;">
+                <a href="about.html" style="text-decoration: none;">
+                    <button>Learn More</button>
+                </a>
+                <a href="applications.html" style="text-decoration: none;">
+                    <button>Apply Now</button>
+                </a>
+            </div>
+        </div>
+        <div class="home-content-image animate-on-scroll">
+            <img src="assets/wisdom_academy.png" alt="Home Image">
+        </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="home-about animate-on-scroll">
+            <div class="about-image">
+                <img src="assets/home.png" alt="Wisdom Academy Campus">
+            </div>
+            <div class="home-about-text">
+                <h2>About Us</h2>
+                <p>Wisdom Academy was established in 2015 with a mission to provide quality education and inspire a culture of learning. By 2017, the school had grown into a strong community dedicated to both teaching and student development.
+
+                   Over the years, Wisdom Academy has become a trophy-winning institution, proudly ranked 1st out of 84 schools in Bole Sub-City.
+
+                   In 2025, the Academy expanded with a new campus for Grades 1–6, offering modern classrooms and a nurturing environment designed to help young learners thrive.
+
+                   Today, Wisdom Academy continues to shape bright futures through excellence, innovation, and commitment to every student’s success.</p>
+            </div>
+        </div>
+
+        <div class="home-mission-vision">
+        <div class="mission-vision animate-on-scroll">
+            <h2>Our Mission</h2>
+            <p>To be recognized as best school in Ethiopia based on the curriculum and police of the land , provide adequate knowledge ,skill, information, talent , attitude, vision and values for those student enrolled all grade and level of education in Wisdom Academy.</p>
+        </div>
+        <div class="mission-vision animate-on-scroll">
+            <h2>Our Vision</h2>
+            <p>Enabling the rising generation, by way of quality education, so as to become product, society competent, problem solvers, developing will rounded personality with human characters and values to be able to face the challenges of the 21st century in education.</p>
+        </div>
+    </div>
+
+        <div class="home-number-stats">
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-students" data-target="500">0+</h2>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-teachers" data-target="50">0+</h2>
+            <p>Qualified Teachers</p>
+        </div>
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-grades">KG-G6</h2>
+            <p>Grade Level</p>
+        </div>
+    </div>
+
+        <div class="timeline-section">
+        <h2 class="animate-on-scroll">Parent Testimonials</h2>
+        <div class="timeline-container">
+
+        <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <h3>Testimonial 1</h3>
+            <p>“My child is doing really well at the school and is a lovely school.”</p>
+        </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <h3>Testimonial 2</h3>
+            <p>“Overall I think the school has done a good job with complaints and assistance in all areas.”</p>
+        </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <h3>Testimonial 3</h3>
+            <p>“An excellent school. My both kids are very happy and progressing very well...”</p>
+        </div>
+        </div>
+
+        <div class="timeline-item animate-on-scroll">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+            <h3>Testimonial 4</h3>
+            <p>“The management is very understanding and supportive.”</p>
+        </div>
+        </div>
+    </div>
+        </div>
+    </section>
+
+    <section id="applications">
+        <div class="home-apply-now animate-on-scroll">
+    <div><img class="apply-now-image" src="assets/apply_now.png" alt="Apply Now Image"></div>
+    <div class="apply-now-text">
+        <h2>Ready to Join Wisdom Academy?</h2>
+        <p>Join our community of learners and take the first step towards a brighter future. 
+        By becoming part of our dynamic and inclusive learning environment, you are not only 
+        enrolling in an institution but also joining a family that values growth, diversity, 
+        and excellence. Here, you will have the opportunity to learn from experienced educators, 
+        collaborate with peers from different backgrounds, and explore your full potential through 
+        innovative teaching methods, modern resources, and real-world experiences.</p>
+        <a href="applications.html" style="text-decoration: none;">
+            <button>Apply Now</button>
+        </a>
+    </div>
+        </div>
+    </section>
+
+    
+    </main>
+
+    <footer id="contact" class="footer animate-on-scroll">
+    <footer class="footer animate-on-scroll">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="assets/wisdom_academy.png" alt="Wisdom Academy Logo" class="footer-logo">
+                    <p>Shaping bright futures through excellence, innovation, and commitment to every student’s success.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 0930 98 77 77 / 09 06 77 77 88</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bole Sub-city, Woreda 12, Bole Bulbula Mariyam Mazoriya, Addis Ababa</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/WisdomAcademyAddis/?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/discover/wisdom-academy"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by Mikiasdereje mikiasdereje01@gmail.com</p>
+            <p>&copy; 2025 Wisdom Academy. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+</body>
+</html>

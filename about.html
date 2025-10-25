@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Academy</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link class="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-init.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="public-stats.js" defer></script>
+    <script src="public-gallery.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="assets/wisdom_academy.png" alt="Wisdom Academy"></a></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="applications.html">Applications</a>
+            <a href="contact.html">Contact</a>
+            <a class="login-button" href="login.html">Login</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="about-us">
+    <h1 class="about-us-title">About Wisdom Academy</h1>
+    <div class="about-us-content">
+        <!-- Left side: Image -->
+        <div class="about-us-image-section">
+            <img src="assets/about_photo.png" alt="School Campus" class="main-image">
+            <img src="assets/founder.png" alt="Founder" class="secondary-image">
+        </div>
+
+        <!-- Right side: Text -->
+        <div class="about-us-text-section">
+            <p>Founded in 2015, Wisdom Academy has a clear mission: to provide high-quality education while fostering curiosity, critical thinking, and lifelong learning. From the beginning, the school has focused on holistic student development, ensuring growth academically, socially, and emotionally.</p>
+
+            <p>By 2017, Wisdom Academy had grown into a vibrant learning community where teachers and students collaborated to achieve excellence. Its commitment to quality education earned recognition and set the stage for future achievements.</p>
+
+            <p>Over the years, Wisdom Academy has become a trophy-winning institution, proudly ranked 1st out of 84 schools in Bole Sub-City. In 2025, a new campus for Grades 1–6 was opened, featuring modern classrooms, safe learning spaces, and an environment designed to help young learners thrive.</p>
+
+            <p>Today, Wisdom Academy continues to shape bright futures through innovative teaching, strong values, and personalized attention. Every day, the school inspires minds, builds character, and nurtures the leaders of tomorrow.</p>
+        </div>
+    </div>
+
+        </div>
+
+        <div class="home-number-stats">
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-students" data-target="500">0+</h2>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-teachers" data-target="50">0+</h2>
+            <p>Qualified Teachers</p>
+        </div>
+        <div class="number-stat animate-on-scroll">
+            <h2 id="stats-grades">KG-G6</h2>
+            <p>Grade Level</p>
+        </div>
+    </div>
+
+    <!-- Public Gallery Section -->
+    <section id="school-gallery" style="max-width: 1200px; margin: 80px auto; padding: 0 20px; text-align: center;">
+        <h2 style="font-size: 2.5rem; color: #1a1a1a; margin-bottom: 40px;">Our Gallery</h2>
+        <div id="public-gallery-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; text-align: left;">
+            <!-- Gallery items will be loaded here by public-gallery.js -->
+        </div>
+    </section>
+
+
+    </main>
+
+    <footer id="contact" class="footer animate-on-scroll">
+    <footer class="footer animate-on-scroll">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="assets/wisdom_academy.png" alt="Wisdom Academy Logo" class="footer-logo">
+                    <p>Shaping bright futures through excellence, innovation, and commitment to every student’s success.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 0930 98 77 77 / 09 06 77 77 88</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bole Sub-city, Woreda 12, Bole Bulbula Mariyam Mazoriya, Addis Ababa</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                         <a href="https://web.facebook.com/WisdomAcademyAddis/?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/discover/wisdom-academy"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by Mikiasdereje mikiasdereje01@gmail.com</p>
+            <p>&copy; 2025 Wisdom Academy. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+</body>
+</html>

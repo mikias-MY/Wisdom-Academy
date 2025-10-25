@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Academy - Contact</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-init.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="contact-form.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="#home"><img src="assets/wisdom_academy.png" alt="Wisdom Academy"></a></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="applications.html">Applications</a>
+            <a href="contact.html">Contact</a>
+            <a class="login-button" href="login.html">Login</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contact Wisdom Academy</h1>
+            <p class="intro-text">Have a question or want to reach out? Fill out the form or find our contact info below.</p>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 id="form-header">Send Us a Message</h2>
+                    <div id="contact-form-message-container" style="display: none;">
+                        <i id="contact-form-message-icon" class="fas"></i>
+                        <p id="contact-form-message-text"></p>
+                    </div>
+                    <form id="contact-form">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- School Information -->
+                <div class="contact-info">
+                    <h2>School Information</h2>
+                    <ul>
+                        <li><i class="fas fa-school"></i> <strong>School Name:</strong> Wisdom Academy</li>
+                        <li><i class="fas fa-phone"></i> <strong>Phone:</strong> 0930 98 77 77 / 09 06 77 77 88</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@wisdomacademy.edu.et</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Bole Sub-city, Woreda 12, Bole Bulbula Mariyam Mazoriya, Addis Ababa</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> <strong>Grades/Classes:</strong> KG up to Grade 6</li>
+                        <li><i class="fas fa-clock"></i> <strong>Office Hours:</strong> Monday – Friday 1:30 PM - 10:00 PM</li>
+                    </ul>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.847612345678!2d38.7903379!3d8.9549831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b83aa9fb3f061%3A0x88ba656cf835f4c1!2sWisdom%20Academy%20@%20Bulbula!5e0!3m2!1sen!2set!4v1695861234567!5m2!1sen!2set"
+                            width="100%"
+                            height="350"
+                            style="border:0; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="assets/wisdom_academy.png" alt="Wisdom Academy Logo" class="footer-logo">
+                    <p>Shaping bright futures through excellence, innovation, and commitment to every student’s success.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/WisdomAcademyAddis/?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/discover/wisdom-academy"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by Mikiasdereje mikiasdereje01@gmail.com</p>
+            <p>&copy; 2025 Wisdom Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

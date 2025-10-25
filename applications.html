@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Academy</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link class="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="applications.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-init.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="application-form.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="assets/wisdom_academy.png" alt="Wisdom Academy"></a></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="applications.html">Applications</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html" class="dashboard-link" style="display: none;">Dashboard</a>
+            <a class="login-button" href="login.html">Login</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+    <div class="applications">
+        <h1>School Application Form</h1>
+        <div id="form-message-container" style="display: none;">
+            <i id="form-message-icon" class="fas"></i>
+            <p id="form-message-text"></p>
+        </div>
+        <form id="school-application-form" class="school-application-form">
+            
+            <h2>Student Information</h2>
+            <div class="form-row">
+                <div class="form-group"><label>First Name<input type="text" name="first_name" required></label></div>
+                <div class="form-group"><label>Last Name<input type="text" name="last_name" required></label></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>Date of Birth<input type="date" name="dob" required></label></div>
+                <div class="form-group"><label>Age<input type="number" name="age" placeholder="e.g., 7" required></label></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>Place of Birth<input type="text" name="place_of_birth" required></label></div>
+                <div class="form-group"><label>Gender<select name="gender" required><option value="">Select Gender</option><option value="Male">Male</option><option value="Female">Female</option></select></label></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>Phone Number<input type="tel" name="phone" placeholder="(123) 456-7890" title="Format: (123) 456-7890" required></label></div>
+                
+            </div>
+            <div class="form-group">
+                <label>Student's Address</label>
+                <input type="text" name="street" placeholder="Street Address" required>
+                <input type="text" name="street2" placeholder="Street Address Line 2 (Optional)">
+                <div class="form-row">
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="text" name="state" placeholder="State / Province" required>
+                    <input type="text" name="zip" placeholder="Postal / Zip Code" required>
+                </div>
+            </div>
+
+            <h2>Academic Information</h2>
+            <div class="form-row">
+                <div class="form-group"><label>Applying for Grade Level<input type="text" name="grade_level" required></label></div>
+                <div class="form-group"><label>Applying for School Year<input type="text" name="school_year" placeholder="e.g., 2025-2026" required></label></div>
+            </div>
+            <div class="form-group">
+                <label>School Last Attended</label>
+                <input type="text" name="last_school" required>
+            </div>
+            <div class="form-group">
+                <label>Previous School's Address</label>
+                <input type="text" name="school_street" placeholder="Street Address" required>
+                <div class="form-row">
+                    <input type="text" name="school_city" placeholder="City" required>
+                    <input type="text" name="school_state" placeholder="State / Province" required>
+                </div>
+            </div>
+
+            <h2>Parent / Guardian Information</h2>
+            <div class="form-group">
+                <label>Primary Parent/Guardian</label>
+                <div class="form-row">
+                    <input type="text" name="parent1_first" placeholder="First Name" required>
+                    <input type="text" name="parent1_last" placeholder="Last Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="parent1_occupation" placeholder="Occupation" required>
+                    <input type="tel" name="parent1_phone" placeholder="Phone Number" title="Format: (123) 456-7890" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Secondary Parent/Guardian (Optional)</label>
+                <div class="form-row">
+                    <input type="text" name="parent2_first" placeholder="First Name">
+                    <input type="text" name="parent2_last" placeholder="Last Name">
+                </div>
+                <div class="form-row">
+                    <input type="text" name="parent2_occupation" placeholder="Occupation">
+                    <input type="tel" name="parent2_phone" placeholder="Phone Number" title="Format: (123) 456-7890">
+                </div>
+            </div>
+
+            <h2>Emergency Contact</h2>
+            <div class="form-row">
+                <div class="form-group"><label>First Name<input type="text" name="emergency_first" required></label></div>
+                <div class="form-group"><label>Last Name<input type="text" name="emergency_last" required></label></div>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="emergency_phone" placeholder="(123) 456-7890" title="Format: (123) 456-7890" required>
+            </div>
+
+            
+
+            <h2>Health History</h2>
+            <div class="form-group">
+                <label>Allergies</label>
+                <textarea name="allergies" placeholder="List any known allergies"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Current Medications</label>
+                <textarea name="medications" placeholder="List any medications the student is currently taking"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Medical Conditions or Previous Surgeries</label>
+                <textarea name="conditions" placeholder="Declare any important medical conditions, history, or surgeries"></textarea>
+            </div>
+
+            <h2>Reminders</h2>
+            <ul>
+                <li><strong>Exam:</strong> New students or transferees must take an entrance exam.</li>
+                <li><strong>Interview:</strong> The school administration will conduct an interview as part of the screening process.</li>
+                <li><strong>Requirements:</strong> All required documents must be completed and submitted before the start of school.</li>
+                <li><strong>Medical Clearance:</strong> A yearly physical exam is required for all students.</li>
+                <li><strong>Good Moral:</strong> A Certificate of Good Moral Character from the previous school is required for admission.</li>
+            </ul>
+
+            <h2>Acknowledgement</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Parent/Guardian Signature</label>
+                    <input type="text" name="guardian_signature" placeholder="Type Full Name to Sign" required>
+                </div>
+                <div class="form-group">
+                    <label>Date Signed</label>
+                    <input type="date" name="date_signed" required>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+    <footer id="contact" class="footer animate-on-scroll">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="assets/wisdom_academy.png" alt="Wisdom Academy Logo" class="footer-logo">
+                    <p>Shaping bright futures through excellence, innovation, and commitment to every student’s success.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 0930 98 77 77 / 09 06 77 77 88</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bole Sub-city, Woreda 12, Bole Bulbula Mariyam Mazoriya, Addis Ababa</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/WisdomAcademyAddis/?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/discover/wisdom-academy"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by Mikiasdereje mikiasdereje01@gmail.com</p>
+            <p>&copy; 2025 Wisdom Academy. All Rights Reserved.</p>
+
+        </div>
+</body>
+</html>

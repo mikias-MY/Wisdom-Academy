@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Academy</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link class="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-init.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="auth.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="assets/wisdom_academy.png" alt="Wisdom Academy"></a></div>
+        <div class="menu">
+            <a class="login-button" id="dashboard-link" href="admin.html">Dashboard</a>
+            <a class="login-button" id="logout-link" href="login.html">Logout</a>
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="admin-dashboard-content" style="display: none;">
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <p>Manage school statistics, gallery, and applications.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Applications Management Card -->
+                <div id="applications-management-section" class="dashboard-card" style="display: none;">
+                    <h2 class="card-header">Received Applications</h2>
+                    <div id="applications-container" class="card-body">
+                        <!-- Applications will be loaded here by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Contact Messages Card -->
+                <div id="messages-management-section" class="dashboard-card" style="display: none;">
+                    <h2 class="card-header">Contact Messages</h2>
+                    <div id="messages-container" class="card-body">
+                        <!-- Messages will be loaded here by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Gallery Management Card -->
+                <div id="gallery-management-section" class="dashboard-card" style="display: none;">
+                    <h2 class="card-header">Gallery Management</h2>
+                    <div class="card-body">
+                        <!-- Form for Creating and Editing Posts -->
+                        <form id="gallery-post-form">
+                            <h3 id="gallery-form-title" style="margin-top: 0;">Create New Post</h3>
+                            <input type="hidden" id="post-id" name="post-id">
+                            <div class="form-group">
+                                <label for="post-title">Title:</label>
+                                <input type="text" id="post-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="post-description">Description:</label>
+                                <textarea id="post-description" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="post-image">Image:</label>
+                                <input type="file" id="post-image" accept="image/*">
+                                <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+                            </div>
+                            <div class="gallery-form-buttons">
+                                <button type="submit" class="btn-success">Save Post</button>
+                                <button type="button" id="cancel-edit-btn" class="btn-secondary" style="display: none;">Cancel Edit</button>
+                            </div>
+                            <p id="gallery-message" class="form-message"></p>
+                        </form>
+
+                        <!-- Display Area for Uploaded Posts -->
+                        <h3 style="margin-top: 40px;">Uploaded Posts</h3>
+                        <div id="gallery-posts-container">
+                            <!-- Posts will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Management Card -->
+                <div id="stats-management-section" class="dashboard-card" style="display: none;">
+                    <h2 class="card-header">School Statistics Management</h2>
+                    <form id="school-stats-form" class="card-body">
+                        <div class="form-group">
+                            <label for="students_enrolled">Students Enrolled:</label>
+                            <input type="number" id="students_enrolled" name="students_enrolled" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="qualified_teachers">Qualified Teachers:</label>
+                            <input type="number" id="qualified_teachers" name="qualified_teachers" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade_level_text">Grade Level Text:</label>
+                            <input type="text" id="grade_level_text" name="grade_level_text" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                        <p id="stats-message" class="form-message"></p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Modal for viewing application details -->
+            <div id="application-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3 id="modal-applicant-name"></h3>
+                    <div id="modal-application-details">
+                        <!-- Details will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+</body>
+</html>
