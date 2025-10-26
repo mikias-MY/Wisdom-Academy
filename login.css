@@ -210,8 +210,11 @@ body {
 /* Responsive Navbar Menu */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%;
+        width: 100%;
         padding: 15px 20px;
+        margin: 0;
+        border-radius: 0;
+        box-sizing: border-box;
     }
 
     .menu {

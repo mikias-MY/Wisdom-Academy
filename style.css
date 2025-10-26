@@ -666,6 +666,58 @@ body {
     }
 }
 
+/* Responsive Navbar Menu */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 15px 20px;
+        margin: 0;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    .menu.active {
+        max-height: 350px; /* Increased height to fit all items */
+        padding: 10px 0;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    /* Ensure login buttons in mobile menu take full width */
+    .menu .login-button {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
 /* Footer Styles */
 .footer {
     background-color: #1a1a1a;
