@@ -10,13 +10,12 @@ body {
 
 /* Main Content Area - Adjusted for responsiveness */
 main {
-    padding: 15px;
-    padding-top: 100px; /* Add padding to offset the fixed navbar */
+    padding: 15px; /* Default padding for smaller screens */
 }
 
 #admin-dashboard-content {
     max-width: 1200px;
-    margin: 0 auto; /* Removed top margin */
+    margin: 15px auto; /* Centered content */
 }
 
 .dashboard-header {
@@ -42,7 +41,8 @@ main {
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 20px; /* Slightly increased gap for better separation */
+    padding: 0; /* Let main padding handle overall spacing */
 }
 
 /* Dashboard Card Styling */
@@ -50,7 +50,7 @@ main {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-    padding: 25px; /* Increased padding */
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -314,13 +314,18 @@ button.btn-danger:hover {
 
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .dashboard-header h1 {
-        font-size: 1.6rem;
+    .dashboard-header {
+        margin-bottom: 20px; /* Consistent with base */
     }
+
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    } /* Buttons stack on extra small screens */
 
     .applications-table .action-buttons button,
     .gallery-post-card .action-buttons button {
-        width: 100%; /* Ensure buttons in tables/cards are full-width */
+        width: 100%;
         margin: 0;
     }
 
@@ -332,6 +337,10 @@ button.btn-danger:hover {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  
+    .dashboard-header h1 {
+        font-size: 2rem; /* Larger header for small tablets/landscape phones */
+    }
 
     .applications-table .action-buttons,
     .gallery-post-card .action-buttons {
@@ -351,13 +360,13 @@ button.btn-danger:hover {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .dashboard-header h1 {
-        font-size: 2.2rem;
-    }
-
     .dashboard-grid {
         grid-template-columns: 1fr 1fr; /* Two columns for tablets */
         gap: 25px;
+    }
+
+    .dashboard-card {
+        padding: 25px;
     }
 
     .card-header {
@@ -366,7 +375,6 @@ button.btn-danger:hover {
 
     main {
         padding: 20px; /* More padding on larger screens */
-        padding-top: 100px;
     }
 
     #gallery-posts-container {
@@ -382,15 +390,33 @@ button.btn-danger:hover {
 /* Large devices (desktops, 992px and up) and Extra large devices (1200px and up) */
 @media (min-width: 992px) {
     .dashboard-header h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
     
     main {
         padding: 30px; /* Even more padding on large desktops */
-        padding-top: 100px;
     }
     
     #gallery-posts-container {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .dashboard-card {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Print styles */
+@media print {
+    .dashboard-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    button {
+        display: none;
     }
 }
